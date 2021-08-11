@@ -1,0 +1,10 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "npm.packageManager": "yarn",
+  "json.schemas": [
+    {
+      "fileMatch": ["/**/.sfdevrc.json"],
+      "url": "./packages/dev-scripts/sfdevrc.schema.json"
+    }
+  ]
+}
