@@ -1,0 +1,10 @@
+// Generated - Do not modify. Controlled by @salesforce/dev-scripts
+{
+  "extends": "@salesforce/dev-config/tsconfig-strict",
+  "compilerOptions": {
+    "outDir": "lib"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
