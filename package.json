@@ -3,7 +3,7 @@
   "version": "1.5.20",
   "description": "Types and related utilities for TypeScript",
   "main": "lib/index.js",
-  "repository": "https://github.com/forcedotcom/ts-types",
+  "repository": "forcedotcom/ts-types",
   "author": "Salesforce",
   "license": "BSD-3-Clause",
   "types": "lib/index.d.ts",

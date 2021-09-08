@@ -20,12 +20,30 @@ workflows:
                 - latest
                 - lts
                 - maintenance
-      - release-management/release-lerna-packages:
+      - release-management/release-package:
           github-release: true
           requires:
             - release-management/test-package
           filters:
             branches:
               only: main
-          post-job-steps:
-            - run: yarn ci-docs
+  test-ts-update:
+    triggers:
+      - schedule:
+          cron: 0 0 * * *
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - release-management/test-ts-update
+  dependabot-automerge:
+    triggers:
+      - schedule:
+          cron: '0 2,5,8,11 * * *'
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - release-management/dependabot-automerge
