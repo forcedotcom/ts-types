@@ -528,9 +528,9 @@
   integrity sha512-1swy07rynHoTRk8lj6nuC0JceRBo300OuWnovQe2OMvLpQM5Dh1SUnv1SE8012PsrK9BC1WqGXp4BUyMo04x7w==
 
 "@salesforce/dev-scripts@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@salesforce/dev-scripts/-/dev-scripts-1.0.0.tgz#49715d11c43ec55e8f8e12ed7afbfd6443492169"
-  integrity sha512-DFOeT+4vazRyYNLTzRmqFDFCY80DZBjiWB5dEt4MqcpifKduwuUc/I+ex+ATLdc6cSczFMhNoPELAR+jsKlDcw==
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@salesforce/dev-scripts/-/dev-scripts-1.0.1.tgz#47c8472751d7a9bb000916a0166c1be9028f8105"
+  integrity sha512-lHZIDyeAoTvs5wB2KxC1eatBSAPR470xqbxVmx2PhMTcGqwaXg6mtFItkZ0tm3WogJVmeJBfptjLlOiUaHLs1w==
   dependencies:
     "@commitlint/cli" "^12.1.4"
     "@commitlint/config-conventional" "^10.0.0"
