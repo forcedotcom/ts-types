@@ -17,6 +17,7 @@
     "clean-all": "sf-clean all",
     "compile": "sf-compile",
     "docs": "sf-docs",
+    "ci-docs": "yarn sf-ci-docs",
     "format": "sf-format",
     "lint": "sf-lint",
     "prepack": "sf-prepack",

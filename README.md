@@ -7,7 +7,7 @@ This is a simple TypeScript-oriented library developed for use in Salesforce Typ
 1. A collection of commonly desired types.
 1. A collection of type-narrowing convenience functions for writing concise type-guards.
 
-See the [API documentation](https://forcedotcom.github.io/sfdx-dev-packages/ts-types) for more details on each of the utilities that `ts-types` provides.
+See the [API documentation](https://forcedotcom.github.io/ts-types) for more details on each of the utilities that `ts-types` provides.
 
 ## Why did we create it?
 
@@ -25,7 +25,7 @@ For example, look at the following typical untyped JSON processing in JavaScript
 
 ```javascript
 // concise, but not at all null-safe or type-safe; often made to be at least null-safe using lodash fns
-JSON.parse(response.body).results.forEach(item => db.save(item.id, item));
+JSON.parse(response.body).results.forEach((item) => db.save(item.id, item));
 ```
 
 Then a safe version in bare TypeScript using type guards:
@@ -38,7 +38,7 @@ let results = json.results;
 // type of results -> `any`
 if (!Array.isArray(results)) results = [];
 // type of results -> `any[]`
-results.forEach(item => {
+results.forEach((item) => {
   // type of item -> `any`
   const id = item.id;
   // type of id -> `any`
@@ -55,7 +55,7 @@ const json = ensureJsonMap(JSON.parse(response.body));
 // type of json -> `JsonMap` or raises an error
 const results = asJsonArray(json.results, []);
 // type of results -> `JsonArray` or uses the default of `[]`
-results.forEach(item => {
+results.forEach((item) => {
   // type of item -> `AnyJson`
   record = ensureJsonMap(record);
   db.save(ensureString(record.id), record);
@@ -65,7 +65,7 @@ results.forEach(item => {
 Removing the comments, we can shorten the above somewhat to achieve something not much more complex than the original example, but with robust type and null checking implemented:
 
 ```typescript
-asJsonArray(ensureJsonMap(JSON.parse(response.body)).results, []).forEach(item => {
+asJsonArray(ensureJsonMap(JSON.parse(response.body)).results, []).forEach((item) => {
   const record = ensureJsonMap(item);
   db.save(ensureString(record.id), record);
 });
@@ -162,7 +162,7 @@ The `get*` suite of functions search an `unknown` target value for a given path.
 const response = {
   start: 0,
   length: 2,
-  results: [{ name: 'first' }, { name: 'second' }]
+  results: [{ name: 'first' }, { name: 'second' }],
 };
 const nameOfFirst = getString(response, 'results[0].name');
 // type of nameOfFirst = string
@@ -184,9 +184,9 @@ The `to*` suite of functions is a fully type-safe version of the `coerce*` funct
 ```typescript
 const obj = {
   name: 'example',
-  parse: function(s) {
+  parse: function (s) {
     return s.split(':');
-  }
+  },
 };
 const json = toJsonMap(obj);
 // type of json -> JsonMap
@@ -202,7 +202,7 @@ This suite of functions are used to iterate the keys, entries, and values of obj
 const pets: Dictionary<string> = {
   fido: 'dog',
   bill: 'cat',
-  fred: undefined
+  fred: undefined,
 };
 // note that the array is typed as [string, string] rather than [string, string | undefined]
 function logPet([name, type]: [string, string]) {
