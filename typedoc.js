@@ -1,3 +1,3 @@
 module.exports = {
-  exclude: ['**/index.ts']
+  theme: 'default',
 };
