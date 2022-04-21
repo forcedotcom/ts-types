@@ -27,6 +27,7 @@ workflows:
           filters:
             branches:
               only: main
+          context: salesforce-cli
   test-ts-update:
     triggers:
       - schedule:
@@ -46,4 +47,5 @@ workflows:
               only:
                 - main
     jobs:
-      - release-management/dependabot-automerge
+      - release-management/dependabot-automerge:
+          context: salesforce-cli
