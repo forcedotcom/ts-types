@@ -41,7 +41,7 @@ export function toAnyJson<T>(value: Nullable<T>, defaultValue?: AnyJson): Option
   try {
     return (value !== undefined ? JSON.parse(JSON.stringify(value)) : defaultValue) as Optional<AnyJson>;
   } catch (err) {
-    throw new JsonCloneError(err);
+    throw new JsonCloneError(err as Error);
   }
 }
 
@@ -87,7 +87,7 @@ export function toJsonMap<T extends object>(value: Nullable<T>): Optional<JsonMa
 export function toJsonMap<T extends object>(value: Nullable<T>, defaultValue: JsonMap): JsonMap;
 // underlying function
 export function toJsonMap<T extends object>(value: Nullable<T>, defaultValue?: JsonMap): Optional<JsonMap> {
-  return asJsonMap(toAnyJson(value)) || defaultValue;
+  return asJsonMap(toAnyJson(value)) ?? defaultValue;
 }
 
 /**
@@ -132,5 +132,5 @@ export function toJsonArray<T>(value: Optional<T[]>): Optional<JsonArray>;
 export function toJsonArray<T>(value: Optional<T[]>, defaultValue: JsonArray): JsonArray;
 // underlying method
 export function toJsonArray<T>(value: Optional<T[]>, defaultValue?: JsonArray): Optional<JsonArray> {
-  return asJsonArray(toAnyJson(value)) || defaultValue;
+  return asJsonArray(toAnyJson(value)) ?? defaultValue;
 }
