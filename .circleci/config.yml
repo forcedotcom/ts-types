@@ -22,6 +22,8 @@ workflows:
                 - maintenance
       - release-management/release-package:
           github-release: true
+          post-job-steps:
+            - run: yarn ci-docs
           requires:
             - release-management/test-package
           filters:

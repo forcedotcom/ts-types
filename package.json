@@ -13,8 +13,9 @@
   ],
   "scripts": {
     "build": "sf-build",
-    "clean": "sf-clean",
+    "ci-docs": "yarn sf-ci-docs",
     "clean-all": "sf-clean all",
+    "clean": "sf-clean",
     "compile": "sf-compile",
     "docs": "sf-docs",
     "format": "sf-format",
