@@ -7,7 +7,7 @@ This is a simple TypeScript-oriented library developed for use in Salesforce Typ
 1. A collection of commonly desired types.
 1. A collection of type-narrowing convenience functions for writing concise type-guards.
 
-See the [API documentation](https://forcedotcom.github.io/sfdx-dev-packages/ts-types) for more details on each of the utilities that `ts-types` provides.
+See the [API documentation](https://forcedotcom.github.io/ts-types) for more details on each of the utilities that `ts-types` provides.
 
 ## Why did we create it?
 
