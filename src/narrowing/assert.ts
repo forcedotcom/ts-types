@@ -41,7 +41,7 @@ import { toAnyJson } from './to';
  */
 export function assert(condition: boolean, message?: string): asserts condition {
   if (!condition) {
-    throw new AssertionFailedError(message || 'Assertion condition was false');
+    throw new AssertionFailedError(message ?? 'Assertion condition was false');
   }
 }
 
@@ -61,7 +61,7 @@ export function assert(condition: boolean, message?: string): asserts condition 
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertNonNull<T = unknown>(value: Nullable<T>, message?: string): asserts value is T {
-  assert(value != null, message || 'Value is not defined');
+  assert(value != null, message ?? 'Value is not defined');
 }
 
 /**
@@ -72,7 +72,7 @@ export function assertNonNull<T = unknown>(value: Nullable<T>, message?: string)
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertString(value: unknown, message?: string): asserts value is string {
-  assertNonNull(asString(value), message || 'Value is not a string');
+  assertNonNull(asString(value), message ?? 'Value is not a string');
 }
 
 /**
@@ -83,7 +83,7 @@ export function assertString(value: unknown, message?: string): asserts value is
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertNumber(value: unknown, message?: string): asserts value is number {
-  assertNonNull(asNumber(value), message || 'Value is not a number');
+  assertNonNull(asNumber(value), message ?? 'Value is not a number');
 }
 
 /**
@@ -94,7 +94,7 @@ export function assertNumber(value: unknown, message?: string): asserts value is
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertBoolean(value: unknown, message?: string): asserts value is boolean {
-  assertNonNull(asBoolean(value), message || 'Value is not a boolean');
+  assertNonNull(asBoolean(value), message ?? 'Value is not a boolean');
 }
 
 /**
@@ -105,7 +105,7 @@ export function assertBoolean(value: unknown, message?: string): asserts value i
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertObject<T extends object = object>(value: unknown, message?: string): asserts value is T {
-  assertNonNull(asObject<T>(value), message || 'Value is not an object');
+  assertNonNull(asObject<T>(value), message ?? 'Value is not an object');
 }
 
 /**
@@ -117,7 +117,7 @@ export function assertObject<T extends object = object>(value: unknown, message?
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertPlainObject<T extends object = object>(value: unknown, message?: string): asserts value is T {
-  assertNonNull(asPlainObject<T>(value), message || 'Value is not a plain object');
+  assertNonNull(asPlainObject<T>(value), message ?? 'Value is not a plain object');
 }
 
 /**
@@ -129,7 +129,7 @@ export function assertPlainObject<T extends object = object>(value: unknown, mes
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertDictionary<T = unknown>(value: unknown, message?: string): asserts value is Dictionary<T> {
-  assertNonNull(asDictionary<T>(value), message || 'Value is not a dictionary object');
+  assertNonNull(asDictionary<T>(value), message ?? 'Value is not a dictionary object');
 }
 
 /**
@@ -145,7 +145,7 @@ export function assertInstance<C extends AnyConstructor>(
   ctor: C,
   message?: string
 ): asserts value is InstanceType<C> {
-  assertNonNull(asInstance(value, ctor), message || `Value is not an instance of ${ctor.name}`);
+  assertNonNull(asInstance(value, ctor), message ?? `Value is not an instance of ${ctor.name}`);
 }
 
 /**
@@ -156,7 +156,7 @@ export function assertInstance<C extends AnyConstructor>(
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertArray(value: unknown, message?: string): asserts value is AnyArray {
-  assertNonNull(asArray(value), message || 'Value is not an array');
+  assertNonNull(asArray(value), message ?? 'Value is not an array');
 }
 
 /**
@@ -167,7 +167,7 @@ export function assertArray(value: unknown, message?: string): asserts value is 
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertFunction(value: unknown, message?: string): asserts value is AnyFunction {
-  assertNonNull(asFunction(value), message || 'Value is not a function');
+  assertNonNull(asFunction(value), message ?? 'Value is not a function');
 }
 
 /**
@@ -180,7 +180,7 @@ export function assertFunction(value: unknown, message?: string): asserts value 
  * @throws {@link AssertionFailedError} If the value was not a JSON value type.
  */
 export function assertAnyJson(value: unknown, message?: string): asserts value is AnyJson {
-  assertNonNull(toAnyJson(value), message || 'Value is not a JSON-compatible value type');
+  assertNonNull(toAnyJson(value), message ?? 'Value is not a JSON-compatible value type');
 }
 
 /**
@@ -191,7 +191,7 @@ export function assertAnyJson(value: unknown, message?: string): asserts value i
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertJsonMap(value: Optional<AnyJson>, message?: string): asserts value is JsonMap {
-  assertNonNull(asJsonMap(value), message || 'Value is not a JsonMap');
+  assertNonNull(asJsonMap(value), message ?? 'Value is not a JsonMap');
 }
 
 /**
@@ -202,5 +202,5 @@ export function assertJsonMap(value: Optional<AnyJson>, message?: string): asser
  * @throws {@link AssertionFailedError} If the value was undefined.
  */
 export function assertJsonArray(value: Optional<AnyJson>, message?: string): asserts value is JsonArray {
-  assertNonNull(asJsonArray(value), message || 'Value is not a JsonArray');
+  assertNonNull(asJsonArray(value), message ?? 'Value is not a JsonArray');
 }

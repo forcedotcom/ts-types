@@ -36,7 +36,7 @@ import { KeyOf, Nullable } from '../types';
  * @param obj The object of interest.
  */
 export function keysOf<T extends object, K extends KeyOf<T>>(obj: Nullable<T>): K[] {
-  return Object.keys(obj || {}) as K[];
+  return Object.keys(obj ?? {}) as K[];
 }
 
 /**
@@ -68,7 +68,7 @@ export function keysOf<T extends object, K extends KeyOf<T>>(obj: Nullable<T>): 
  * @param obj The object of interest.
  */
 export function entriesOf<T extends object, K extends KeyOf<T>>(obj: Nullable<T>): Array<[K, T[K]]> {
-  return Object.entries(obj || {}) as Array<[K, T[K]]>;
+  return Object.entries(obj ?? {}) as Array<[K, T[K]]>;
 }
 
 /**
@@ -100,7 +100,7 @@ export function entriesOf<T extends object, K extends KeyOf<T>>(obj: Nullable<T>
  * @param obj The object of interest.
  */
 export function valuesOf<T extends object, K extends KeyOf<T>>(obj: Nullable<T>): Array<T[K]> {
-  return Object.values(obj || {});
+  return Object.values(obj ?? {});
 }
 
 /**

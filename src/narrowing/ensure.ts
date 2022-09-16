@@ -39,7 +39,7 @@ import { toAnyJson } from './to';
  */
 export function ensure<T = unknown>(value: Nullable<T>, message?: string): T {
   if (value == null) {
-    throw new UnexpectedValueTypeError(message || 'Value is not defined');
+    throw new UnexpectedValueTypeError(message ?? 'Value is not defined');
   }
   return value;
 }
@@ -52,7 +52,7 @@ export function ensure<T = unknown>(value: Nullable<T>, message?: string): T {
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureString(value: unknown, message?: string): string {
-  return ensure(asString(value), message || 'Value is not a string');
+  return ensure(asString(value), message ?? 'Value is not a string');
 }
 
 /**
@@ -63,7 +63,7 @@ export function ensureString(value: unknown, message?: string): string {
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureNumber(value: unknown, message?: string): number {
-  return ensure(asNumber(value), message || 'Value is not a number');
+  return ensure(asNumber(value), message ?? 'Value is not a number');
 }
 
 /**
@@ -74,7 +74,7 @@ export function ensureNumber(value: unknown, message?: string): number {
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureBoolean(value: unknown, message?: string): boolean {
-  return ensure(asBoolean(value), message || 'Value is not a boolean');
+  return ensure(asBoolean(value), message ?? 'Value is not a boolean');
 }
 
 /**
@@ -85,7 +85,7 @@ export function ensureBoolean(value: unknown, message?: string): boolean {
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureObject<T extends object = object>(value: unknown, message?: string): T {
-  return ensure(asObject<T>(value), message || 'Value is not an object');
+  return ensure(asObject<T>(value), message ?? 'Value is not an object');
 }
 
 /**
@@ -97,7 +97,7 @@ export function ensureObject<T extends object = object>(value: unknown, message?
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensurePlainObject<T extends object = object>(value: unknown, message?: string): T {
-  return ensure(asPlainObject<T>(value), message || 'Value is not a plain object');
+  return ensure(asPlainObject<T>(value), message ?? 'Value is not a plain object');
 }
 
 /**
@@ -109,7 +109,7 @@ export function ensurePlainObject<T extends object = object>(value: unknown, mes
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureDictionary<T = unknown>(value: unknown, message?: string): Dictionary<T> {
-  return ensure(asDictionary<T>(value), message || 'Value is not a dictionary object');
+  return ensure(asDictionary<T>(value), message ?? 'Value is not a dictionary object');
 }
 
 /**
@@ -121,7 +121,7 @@ export function ensureDictionary<T = unknown>(value: unknown, message?: string):
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureInstance<C extends AnyConstructor>(value: unknown, ctor: C, message?: string): InstanceType<C> {
-  return ensure(asInstance(value, ctor), message || `Value is not an instance of ${ctor.name}`);
+  return ensure(asInstance(value, ctor), message ?? `Value is not an instance of ${ctor.name}`);
 }
 
 /**
@@ -132,7 +132,7 @@ export function ensureInstance<C extends AnyConstructor>(value: unknown, ctor: C
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureArray<T = unknown>(value: unknown, message?: string): T[] {
-  return ensure(asArray(value), message || 'Value is not an array');
+  return ensure(asArray(value), message ?? 'Value is not an array');
 }
 
 /**
@@ -143,7 +143,7 @@ export function ensureArray<T = unknown>(value: unknown, message?: string): T[] 
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureFunction(value: unknown, message?: string): AnyFunction {
-  return ensure(asFunction(value), message || 'Value is not a function');
+  return ensure(asFunction(value), message ?? 'Value is not a function');
 }
 
 /**
@@ -156,7 +156,7 @@ export function ensureFunction(value: unknown, message?: string): AnyFunction {
  * @throws {@link UnexpectedValueTypeError} If the value was not a JSON value type.
  */
 export function ensureAnyJson(value: unknown, message?: string): AnyJson {
-  return ensure(toAnyJson(value), message || 'Value is not a JSON-compatible value type');
+  return ensure(toAnyJson(value), message ?? 'Value is not a JSON-compatible value type');
 }
 
 /**
@@ -167,7 +167,7 @@ export function ensureAnyJson(value: unknown, message?: string): AnyJson {
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureJsonMap(value: Optional<AnyJson>, message?: string): JsonMap {
-  return ensure(asJsonMap(value), message || 'Value is not a JsonMap');
+  return ensure(asJsonMap(value), message ?? 'Value is not a JsonMap');
 }
 
 /**
@@ -178,5 +178,5 @@ export function ensureJsonMap(value: Optional<AnyJson>, message?: string): JsonM
  * @throws {@link UnexpectedValueTypeError} If the value was undefined.
  */
 export function ensureJsonArray(value: Optional<AnyJson>, message?: string): JsonArray {
-  return ensure(asJsonArray(value), message || 'Value is not a JsonArray');
+  return ensure(asJsonArray(value), message ?? 'Value is not a JsonArray');
 }

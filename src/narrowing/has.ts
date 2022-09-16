@@ -52,7 +52,7 @@ import {
  * @param value The value to test.
  * @param keys One or more `string` keys to check for existence.
  */
-export function has<T extends unknown, K extends string>(value: T, keys: Many<K>): value is T & object & View<K> {
+export function has<T, K extends string>(value: T, keys: Many<K>): value is T & object & View<K> {
   return isObject(value) && (isArray(keys) ? keys.every((k) => k in value) : keys in value);
 }
 
@@ -74,10 +74,7 @@ export function has<T extends unknown, K extends string>(value: T, keys: Many<K>
  * @param value The value to test.
  * @param keys A `string` key to check for existence.
  */
-export function hasString<T extends unknown, K extends string>(
-  value: T,
-  key: K
-): value is T & object & View<K, string> {
+export function hasString<T, K extends string>(value: T, key: K): value is T & object & View<K, string> {
   return has(value, key) && isString(value[key]);
 }
 
@@ -99,10 +96,7 @@ export function hasString<T extends unknown, K extends string>(
  * @param value The value to test.
  * @param keys A `number` key to check for existence.
  */
-export function hasNumber<T extends unknown, K extends string>(
-  value: T,
-  key: K
-): value is T & object & View<K, number> {
+export function hasNumber<T, K extends string>(value: T, key: K): value is T & object & View<K, number> {
   return has(value, key) && isNumber(value[key]);
 }
 
@@ -124,10 +118,7 @@ export function hasNumber<T extends unknown, K extends string>(
  * @param value The value to test.
  * @param keys A `boolean` key to check for existence.
  */
-export function hasBoolean<T extends unknown, K extends string>(
-  value: T,
-  key: K
-): value is T & object & View<K, boolean> {
+export function hasBoolean<T, K extends string>(value: T, key: K): value is T & object & View<K, boolean> {
   return has(value, key) && isBoolean(value[key]);
 }
 
@@ -151,7 +142,7 @@ export function hasBoolean<T extends unknown, K extends string>(
  * @param value The value to test.
  * @param keys An `object` key to check for existence.
  */
-export function hasObject<V extends object = object, T extends unknown = unknown, K extends string = string>(
+export function hasObject<V extends object = object, T = unknown, K extends string = string>(
   value: T,
   key: K
 ): value is T & object & View<K, V> {
@@ -179,7 +170,7 @@ export function hasObject<V extends object = object, T extends unknown = unknown
  * @param value The value to test.
  * @param keys A "plain" `object` key to check for existence.
  */
-export function hasPlainObject<V extends object = object, T extends unknown = unknown, K extends string = string>(
+export function hasPlainObject<V extends object = object, T = unknown, K extends string = string>(
   value: T,
   key: K
 ): value is T & object & View<K, V> {
@@ -207,7 +198,7 @@ export function hasPlainObject<V extends object = object, T extends unknown = un
  * @param value The value to test.
  * @param keys A "dictionary" `object` key to check for existence.
  */
-export function hasDictionary<V = unknown, T extends unknown = unknown, K extends string = string>(
+export function hasDictionary<V = unknown, T = unknown, K extends string = string>(
   value: T,
   key: K
 ): value is T & object & View<K, Dictionary<V>> {
@@ -236,7 +227,7 @@ export function hasDictionary<V = unknown, T extends unknown = unknown, K extend
  * @param value The value to test.
  * @param keys An instance of type `C` key to check for existence.
  */
-export function hasInstance<T extends unknown, K extends string, C extends AnyConstructor>(
+export function hasInstance<T, K extends string, C extends AnyConstructor>(
   value: Optional<T>,
   key: K,
   ctor: C
@@ -262,10 +253,7 @@ export function hasInstance<T extends unknown, K extends string, C extends AnyCo
  * @param value The value to test.
  * @param keys An `AnyArray` key to check for existence.
  */
-export function hasArray<T extends unknown, K extends string>(
-  value: Optional<T>,
-  key: K
-): value is T & object & View<K, AnyArray> {
+export function hasArray<T, K extends string>(value: Optional<T>, key: K): value is T & object & View<K, AnyArray> {
   return has(value, key) && isArray(value[key]);
 }
 
@@ -286,7 +274,7 @@ export function hasArray<T extends unknown, K extends string>(
  * @param value The value to test.
  * @param keys An `AnyFunction` key to check for existence.
  */
-export function hasFunction<T extends unknown, K extends string>(
+export function hasFunction<T, K extends string>(
   value: Optional<T>,
   key: K
 ): value is T & object & View<K, AnyFunction> {
@@ -310,10 +298,7 @@ export function hasFunction<T extends unknown, K extends string>(
  * @param value The value to test.
  * @param keys An `AnyJson` key to check for existence.
  */
-export function hasAnyJson<T extends unknown, K extends string>(
-  value: Optional<T>,
-  key: K
-): value is T & object & View<K, AnyJson> {
+export function hasAnyJson<T, K extends string>(value: Optional<T>, key: K): value is T & object & View<K, AnyJson> {
   return has(value, key) && isAnyJson(value[key]);
 }
 

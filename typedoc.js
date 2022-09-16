@@ -1,3 +1,4 @@
 module.exports = {
-  exclude: ['**/index.ts']
+  entryPoints: ['./src/index.ts'],
+  theme: 'default',
 };
