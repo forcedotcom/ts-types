@@ -1,6 +1,6 @@
 {
   "name": "@salesforce/ts-types",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Types and related utilities for TypeScript",
   "main": "lib/index.js",
   "repository": "forcedotcom/ts-types",
