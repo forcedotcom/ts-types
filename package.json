@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@salesforce/dev-config": "^3.0.0",
-    "@salesforce/dev-scripts": "^4.3.0",
+    "@salesforce/dev-scripts": "^4.3.1",
     "@salesforce/prettier-config": "^0.0.2",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
