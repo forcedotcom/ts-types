@@ -7,6 +7,9 @@
   "author": "Salesforce",
   "license": "BSD-3-Clause",
   "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "files": [
     "lib/**/*.js",
     "lib/**/*.d.ts"
