@@ -1,3 +1,12 @@
+## [2.0.5](https://github.com/forcedotcom/ts-types/compare/2.0.4...2.0.5) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([4324551](https://github.com/forcedotcom/ts-types/commit/43245514cb788a4985f99b3c6782382559443d66))
+
+
+
 ## [2.0.4](https://github.com/forcedotcom/ts-types/compare/2.0.3...2.0.4) (2023-07-02)
 
 
