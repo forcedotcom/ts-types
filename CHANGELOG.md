@@ -1,3 +1,12 @@
+## [2.0.7](https://github.com/forcedotcom/ts-types/compare/2.0.6...2.0.7) (2023-08-19)
+
+
+### Bug Fixes
+
+* **deps:** bump tslib from 2.6.1 to 2.6.2 ([5be15ad](https://github.com/forcedotcom/ts-types/commit/5be15ad976b963ac997140892b30fa4e223d1646))
+
+
+
 ## [2.0.6](https://github.com/forcedotcom/ts-types/compare/2.0.5...2.0.6) (2023-07-30)
 
 
