@@ -1,3 +1,9 @@
+## [2.0.9](https://github.com/forcedotcom/ts-types/compare/2.0.8...2.0.9) (2023-10-17)
+
+### Bug Fixes
+
+- **deps:** bump @babel/traverse from 7.15.0 to 7.23.2 ([71c5bf5](https://github.com/forcedotcom/ts-types/commit/71c5bf565affbd3157250b327534c2156261b364))
+
 ## [2.0.8](https://github.com/forcedotcom/ts-types/compare/2.0.7...2.0.8) (2023-09-28)
 
 ### Bug Fixes
