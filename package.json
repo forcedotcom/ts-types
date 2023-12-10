@@ -21,6 +21,7 @@
     "compile": "wireit",
     "docs": "sf-docs",
     "format": "wireit",
+    "link-check": "wireit",
     "lint": "wireit",
     "prepack": "sf-prepack",
     "prepare": "sf-install",
@@ -31,7 +32,7 @@
     "tslib": "^2.6.2"
   },
   "devDependencies": {
-    "@salesforce/dev-scripts": "^7.1.1",
+    "@salesforce/dev-scripts": "^8.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
@@ -89,7 +90,8 @@
     "test": {
       "dependencies": [
         "test:only",
-        "test:compile"
+        "test:compile",
+        "link-check"
       ]
     },
     "test:only": {
@@ -104,6 +106,15 @@
         ".mocha*",
         "!*.nut.ts",
         ".nycrc"
+      ],
+      "output": []
+    },
+    "link-check": {
+      "command": "node -e \"process.exit(process.env.CI ? 0 : 1)\" || linkinator \"**/*.md\" --skip \"CHANGELOG.md|node_modules|test/|confluence.internal.salesforce.com|%s\" --markdown --retry --directory-listing --verbosity error",
+      "files": [
+        "./*.md",
+        "./!(CHANGELOG).md",
+        "messages/**/*.md"
       ],
       "output": []
     }
