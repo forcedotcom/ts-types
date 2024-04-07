@@ -29,9 +29,9 @@ export type AnyJson = JsonPrimitive | JsonCollection;
 /**
  * Any JSON-compatible object.
  */
-export interface JsonMap extends Dictionary<AnyJson> {}
+export type JsonMap = {} & Dictionary<AnyJson>
 
 /**
  * Any JSON-compatible array.
  */
-export interface JsonArray extends Array<AnyJson> {}
+export type JsonArray = {} & AnyJson[]

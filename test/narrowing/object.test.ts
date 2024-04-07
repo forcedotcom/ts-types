@@ -24,7 +24,7 @@ describe('object', () => {
 
     it("should allow convenient enumeration of a typed object's keys", () => {
       const acc: Array<[string, number]> = [];
-      interface Point {
+      type Point = {
         x: number;
         y: number;
       }
@@ -47,7 +47,7 @@ describe('object', () => {
 
     it("should allow convenient enumeration of a typed object's entries", () => {
       const acc: Array<[string, number]> = [];
-      interface Point {
+      type Point = {
         x: number;
         y: number;
       }
@@ -70,7 +70,7 @@ describe('object', () => {
 
     it("should allow convenient enumeration of a typed object's values", () => {
       const acc: number[] = [];
-      interface Point {
+      type Point = {
         x: number;
         y: number;
       }
@@ -84,7 +84,7 @@ describe('object', () => {
   });
 
   describe('definite *', () => {
-    interface Obj {
+    type Obj = {
       a: string;
       b: Optional<string>;
       c: Nullable<string>;

@@ -14,7 +14,7 @@ class TestClass {
   public foo = 'bar';
 }
 
-interface Test {
+type Test = {
   s: string;
   b?: boolean;
   c?: TestClass;
