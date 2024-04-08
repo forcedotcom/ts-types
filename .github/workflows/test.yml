@@ -13,3 +13,9 @@ jobs:
   windows-unit-tests:
     needs: yarn-lockfile-check
     uses: salesforcecli/github-workflows/.github/workflows/unitTestsWindows.yml@main
+  compile:
+    needs: [linux-unit-tests, windows-unit-tests]
+    uses: salesforcecli/github-workflows/.github/workflows/externalCompile.yml@sm/external-compile
+    with:
+      packageName: '@salesforce/core'
+      externalProjectGitUrl: https://github.com/forcedotcom/sfdx-core
