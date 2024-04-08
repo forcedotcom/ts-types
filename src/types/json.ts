@@ -29,9 +29,12 @@ export type AnyJson = JsonPrimitive | JsonCollection;
 /**
  * Any JSON-compatible object.
  */
-export type JsonMap = {} & Dictionary<AnyJson>
+
+// leave this as an interface because it requires circular references that type aliases cannot do
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+export interface JsonMap extends Dictionary<AnyJson> {}
 
 /**
  * Any JSON-compatible array.
  */
-export type JsonArray = {} & AnyJson[]
+export type JsonArray = AnyJson[];

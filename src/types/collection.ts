@@ -19,15 +19,15 @@ import { Optional } from './union';
  */
 export type Dictionary<T = unknown> = {
   [key: string]: Optional<T>;
-}
+};
 
 /**
  * An alias for an array of `T` elements, where `T` defaults to `unknown`.
  */
-export type AnyArray<T = unknown> = {} & T[]
+export type AnyArray<T = unknown> = T[];
 
 /**
  * Any object with both a numeric index signature with values of type `T` and a numeric `length`
  * property. `T` defaults to `unknown` if unspecified.
  */
-export type AnyArrayLike<T = unknown> = {} & ArrayLike<T>
+export type AnyArrayLike<T = unknown> = ArrayLike<T>;
