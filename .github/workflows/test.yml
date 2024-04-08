@@ -24,7 +24,6 @@ jobs:
           - https://github.com/salesforcecli/plugin-auth
           - https://github.com/salesforcecli/plugin-data
           - https://github.com/salesforcecli/plugin-dev
-          - https://github.com/salesforcecli/plugin-org
           - https://github.com/salesforcecli/plugin-source
           - https://github.com/salesforcecli/plugin-deploy-retrieve
           - https://github.com/salesforcecli/plugin-user
