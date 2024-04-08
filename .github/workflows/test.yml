@@ -17,5 +17,5 @@ jobs:
     needs: [linux-unit-tests, windows-unit-tests]
     uses: salesforcecli/github-workflows/.github/workflows/externalCompile.yml@sm/external-compile
     with:
-      packageName: '@salesforce/core'
+      packageName: '@salesforce/ts-types'
       externalProjectGitUrl: https://github.com/forcedotcom/sfdx-core
