@@ -17,17 +17,17 @@ import { Optional } from './union';
  * and values, see the following functions: {@link definiteEntriesOf}, {@link definiteKeysOf}, and
  * {@link definiteValuesOf}.
  */
-export interface Dictionary<T = unknown> {
+export type Dictionary<T = unknown> = {
   [key: string]: Optional<T>;
-}
+};
 
 /**
  * An alias for an array of `T` elements, where `T` defaults to `unknown`.
  */
-export interface AnyArray<T = unknown> extends Array<T> {}
+export type AnyArray<T = unknown> = T[];
 
 /**
  * Any object with both a numeric index signature with values of type `T` and a numeric `length`
  * property. `T` defaults to `unknown` if unspecified.
  */
-export interface AnyArrayLike<T = unknown> extends ArrayLike<T> {}
+export type AnyArrayLike<T = unknown> = ArrayLike<T>;

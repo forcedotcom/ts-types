@@ -13,3 +13,26 @@ jobs:
   windows-unit-tests:
     needs: yarn-lockfile-check
     uses: salesforcecli/github-workflows/.github/workflows/unitTestsWindows.yml@main
+  compile-everywhere:
+    needs: [linux-unit-tests]
+    uses: salesforcecli/github-workflows/.github/workflows/externalCompile.yml@sm/external-compile
+    strategy:
+      fail-fast: false
+      matrix:
+        externalProjectGitUrl:
+          - https://github.com/salesforcecli/plugin-auth
+          - https://github.com/salesforcecli/plugin-data
+          - https://github.com/salesforcecli/plugin-dev
+          - https://github.com/salesforcecli/plugin-source
+          - https://github.com/salesforcecli/plugin-deploy-retrieve
+          - https://github.com/salesforcecli/plugin-user
+          - https://github.com/salesforcecli/sf-plugins-core
+          - https://github.com/forcedotcom/kit
+          - https://github.com/forcedotcom/sfdx-core
+          - https://github.com/forcedotcom/source-deploy-retrieve
+          - https://github.com/forcedotcom/source-tracking
+          - https://github.com/forcedotcom/ts-sinon
+    with:
+      packageName: '@salesforce/ts-types'
+      externalProjectGitUrl: ${{ matrix.externalProjectGitUrl }}
+      command: 'yarn build'
