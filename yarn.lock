@@ -539,10 +539,10 @@
   resolved "https://registry.npmjs.org/@salesforce/dev-config/-/dev-config-4.1.0.tgz#e529576466d074e7a5f1441236510fef123da01e"
   integrity sha512-2iDDepiIwjXHS5IVY7pwv8jMo4xWosJ7p/UTj+lllpB/gnJiYLhjJPE4Z3FCGFKyvfg5jGaimCd8Ca6bLGsCQA==
 
-"@salesforce/dev-scripts@^9.1.0":
-  version "9.1.0"
-  resolved "https://registry.npmjs.org/@salesforce/dev-scripts/-/dev-scripts-9.1.0.tgz#9bb6d87f1cd43dae8fd6cd4eec2b7ba7861eb2d5"
-  integrity sha512-xkx+yOYiv/CtvESXxB8tESUsMhuBqogUpQ+ucbOE4fpW8vFeqAoCA2qOcQOUwlz3ytYNtFReJWrzXDHbwWC7UA==
+"@salesforce/dev-scripts@^9.1.1":
+  version "9.1.1"
+  resolved "https://registry.npmjs.org/@salesforce/dev-scripts/-/dev-scripts-9.1.1.tgz#16028018f3146d0fe28a4693114e3ad2b8075e05"
+  integrity sha512-Nl0jJt6ywPw8QtBa0scZxJeGUEwJl2t2MazZxkXBkdfi13I1ce6NQ6Ce2CYCgh8gsKVP65NWBdyBWRoTz1BMBA==
   dependencies:
     "@commitlint/cli" "^17.1.2"
     "@commitlint/config-conventional" "^17.8.1"
@@ -550,7 +550,7 @@
     "@salesforce/prettier-config" "^0.0.3"
     "@types/chai" "^4.3.14"
     "@types/mocha" "^10.0.6"
-    "@types/node" "^18.19.28"
+    "@types/node" "^18.19.32"
     "@types/sinon" "^10.0.20"
     chai "^4.3.10"
     chalk "^4.0.0"
@@ -649,10 +649,10 @@
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-10.0.6.tgz#818551d39113081048bdddbef96701b4e8bb9d1b"
   integrity sha512-dJvrYWxP/UcXm36Qn36fxhUKu8A/xMRXVT2cliFF1Z7UA9liG5Psj3ezNSZw+5puH2czDXRLcXQxf8JbJt0ejg==
 
-"@types/node@*", "@types/node@^18.19.28":
-  version "18.19.30"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.19.30.tgz#0b1e6f824ed7ce37ef6e56f8f0d7d0ec2847b327"
-  integrity sha512-453z1zPuJLVDbyahaa1sSD5C2sht6ZpHp5rgJNs+H8YGqhluCXcuOUmBYsAo0Tos0cHySJ3lVUGbGgLlqIkpyg==
+"@types/node@*", "@types/node@^18.19.32":
+  version "18.19.33"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.19.33.tgz#98cd286a1b8a5e11aa06623210240bcc28e95c48"
+  integrity sha512-NR9+KrpSajr2qBVp/Yt5TU/rp+b5Mayi3+OlMlcg2cVCfRmcG5PWZ7S4+MG9PZ5gWBoc9Pd0BKSRViuBCRPu0A==
   dependencies:
     undici-types "~5.26.4"
 
