@@ -8,7 +8,7 @@
   "license": "BSD-3-Clause",
   "types": "lib/index.d.ts",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "files": [
     "lib/**/*.js",
@@ -28,12 +28,9 @@
     "test": "wireit",
     "test:only": "wireit"
   },
-  "dependencies": {
-    "tslib": "^2.6.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@salesforce/dev-scripts": "^9.0.0",
-    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "@salesforce/dev-scripts": "^9.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
