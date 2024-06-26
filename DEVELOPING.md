@@ -18,7 +18,7 @@ The packages directory contains the different npm packages.
 You would only do this once after you cloned the repository.
 
 1. Clone this repository from git.
-1. `cd` into `sfdx-dev-packages`.
+1. `cd` into `ts-types`.
 1. We develop using feature brances off `main` and release from the `main` branch. At
    this point, it should be set to `main` by default. If not, run `git checkout -t origin/main`.
 1. `yarn` to bring in all the top-level dependencies and bootstrap.
