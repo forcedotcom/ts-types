@@ -1,3 +1,12 @@
+## [2.0.11](https://github.com/forcedotcom/ts-types/compare/2.0.10...2.0.11) (2024-07-29)
+
+
+### Bug Fixes
+
+* **deps:** devScripts update ([#306](https://github.com/forcedotcom/ts-types/issues/306)) ([baf2277](https://github.com/forcedotcom/ts-types/commit/baf22772314019f9ae48c5700d03112ec6160aff))
+
+
+
 ## [2.0.10](https://github.com/forcedotcom/ts-types/compare/2.0.9...2.0.10) (2024-06-13)
 
 
