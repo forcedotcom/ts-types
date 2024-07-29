@@ -1,3 +1,12 @@
+## [2.0.12](https://github.com/forcedotcom/ts-types/compare/2.0.11...2.0.12) (2024-07-29)
+
+
+### Bug Fixes
+
+* typedoc update ([#307](https://github.com/forcedotcom/ts-types/issues/307)) ([2aebc45](https://github.com/forcedotcom/ts-types/commit/2aebc453f0bc57e206d762d3d5332966dc85b7c1))
+
+
+
 ## [2.0.11](https://github.com/forcedotcom/ts-types/compare/2.0.10...2.0.11) (2024-07-29)
 
 
