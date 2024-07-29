@@ -30,7 +30,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@salesforce/dev-scripts": "^10.2.5",
+    "@salesforce/dev-scripts": "^10.2.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },
