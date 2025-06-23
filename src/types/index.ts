@@ -12,3 +12,4 @@ export * from './function';
 export * from './json';
 export * from './mapped';
 export * from './union';
+export * from './xor';
