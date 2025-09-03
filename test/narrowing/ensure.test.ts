@@ -33,7 +33,11 @@ import {
 } from '../../src/narrowing/ensure';
 
 class TestClass {
-  public constructor(public name = 'test') {}
+  public name: string;
+
+  public constructor(name = 'test') {
+    this.name = name;
+  }
 }
 
 describe('ensure type', () => {
