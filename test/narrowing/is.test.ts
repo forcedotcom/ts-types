@@ -29,7 +29,10 @@ import {
 import { JsonArray } from '../../src/types';
 
 class TestClass {
-  public constructor(public name = 'Test') {}
+  public name: string;
+  public constructor(name: string = 'Test') {
+    this.name = name;
+  }
 }
 
 class TestSubclass extends TestClass {
