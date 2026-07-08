@@ -24,7 +24,10 @@ import {
 } from '../../src/narrowing/has';
 
 class TestClass {
-  public constructor(public name = 'test') {}
+  public name: string;
+  public constructor(name: string = 'test') {
+    this.name = name;
+  }
 }
 
 describe('has type', () => {
