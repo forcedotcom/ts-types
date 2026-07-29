@@ -1,3 +1,22 @@
+# [3.0.0](https://github.com/forcedotcom/ts-types/compare/2.0.12...3.0.0) (2026-07-29)
+
+
+* feat!: require Node >=22.0.0, drop EOL Node versions @W-00000000@ ([ee00176](https://github.com/forcedotcom/ts-types/commit/ee001767c87eb65f28744890b07149954227ba7f))
+* feat!: require Node >=22.0.0, drop EOL Node versions @W-00000000@ ([1196c39](https://github.com/forcedotcom/ts-types/commit/1196c394008adc765c0e0ca1b8166cb720f56118))
+
+
+### BREAKING CHANGES
+
+* raises minimum Node to >=22.0.0
+
+Also:
+- bump @salesforce/dev-scripts to ^11.0.4
+- fix license headers (eslint header/header rule)
+- remove TS parameter properties from tests (unsupported in Node native TS strip mode)
+* raises minimum Node to >=22.0.0
+
+
+
 ## [2.0.12](https://github.com/forcedotcom/ts-types/compare/2.0.11...2.0.12) (2024-07-29)
 
 
