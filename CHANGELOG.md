@@ -1,3 +1,12 @@
+## [3.0.1](https://github.com/forcedotcom/ts-types/compare/3.0.0...3.0.1) (2026-07-30)
+
+
+### Bug Fixes
+
+* **deps:** bump cross-spawn from 7.0.3 to 7.0.6 ([5979b3d](https://github.com/forcedotcom/ts-types/commit/5979b3d8e731e45c8e5b943a76ddd324357920e7))
+
+
+
 # [3.0.0](https://github.com/forcedotcom/ts-types/compare/2.0.12...3.0.0) (2026-07-29)
 
 
