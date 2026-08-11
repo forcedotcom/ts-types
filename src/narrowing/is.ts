@@ -68,6 +68,7 @@ export function isObject<T extends object = object>(value: unknown): value is T 
  *
  * @param value The value to test.
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function isFunction<T extends Function = AnyFunction>(value: unknown): value is T {
   return typeof value === 'function';
 }
