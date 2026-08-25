@@ -3,10 +3,10 @@
   "extends": "@salesforce/dev-config/tsconfig-strict",
   "compilerOptions": {
     "outDir": "lib",
-    // src has no ambient @types dependencies; scoping this to an empty list keeps the
-    // compile from auto-including a consumer's hoisted @types (e.g. a stale @types/glob)
-    // when this package is built in-place inside another project's node_modules (external-compile).
-    "types": []
+    // Skip type-checking declaration files so that compiling this package in-place inside
+    // another project's node_modules (external-compile) doesn't fail on that project's
+    // hoisted third-party @types (e.g. a stale @types/glob referencing renamed minimatch types).
+    "skipLibCheck": true
   },
   "include": ["./src/**/*.ts"]
 }
