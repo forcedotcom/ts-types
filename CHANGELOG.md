@@ -1,3 +1,19 @@
+# [3.1.0](https://github.com/forcedotcom/ts-types/compare/3.0.1...3.1.0) (2026-08-25)
+
+
+### Bug Fixes
+
+* disabling scripts in workflow (W-23928423) ([f9024e5](https://github.com/forcedotcom/ts-types/commit/f9024e5ad384d2563241effc356982102ca74f79))
+* resolving test failures (W-23928423) ([a042a9b](https://github.com/forcedotcom/ts-types/commit/a042a9b7407056d579be4801899628b5cf221575))
+* resolving test failures (W-23928423) ([5a03df2](https://github.com/forcedotcom/ts-types/commit/5a03df2ef2f4c26ea8967909891730b53ef95d50))
+
+
+### Features
+
+* rejiggered eslint.config.mjs (W-23928423) ([7d3c313](https://github.com/forcedotcom/ts-types/commit/7d3c313635de897cefaf94ef03807fd5c01e8e00))
+
+
+
 ## [3.0.1](https://github.com/forcedotcom/ts-types/compare/3.0.0...3.0.1) (2026-07-30)
 
 
