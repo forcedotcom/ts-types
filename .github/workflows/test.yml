@@ -36,3 +36,4 @@ jobs:
       packageName: '@salesforce/ts-types'
       externalProjectGitUrl: ${{ matrix.externalProjectGitUrl }}
       command: 'yarn build'
+      ignoreScripts: true
