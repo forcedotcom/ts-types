@@ -3,6 +3,8 @@
   "extends": "@salesforce/dev-config/tsconfig-strict",
   "compilerOptions": {
     "outDir": "lib",
+    "rootDir": "src",
+    "types": ["node", "mocha"],
     // Skip type-checking declaration files so that compiling this package in-place inside
     // another project's node_modules (external-compile) doesn't fail on that project's
     // hoisted third-party @types (e.g. a stale @types/glob referencing renamed minimatch types).
