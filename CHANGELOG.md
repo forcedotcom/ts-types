@@ -1,3 +1,12 @@
+# [3.2.0](https://github.com/forcedotcom/ts-types/compare/3.1.0...3.2.0) (2026-08-26)
+
+
+### Features
+
+* bumping to ts6 (W-22515355) ([ae35ac5](https://github.com/forcedotcom/ts-types/commit/ae35ac551fc041aa81f8dcf0c46a454f7f4d4ce1))
+
+
+
 # [3.1.0](https://github.com/forcedotcom/ts-types/compare/3.0.1...3.1.0) (2026-08-25)
 
 
