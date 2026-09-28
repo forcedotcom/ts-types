@@ -1,3 +1,12 @@
+## [3.2.1](https://github.com/forcedotcom/ts-types/compare/3.2.0...3.2.1) (2026-09-28)
+
+
+### Bug Fixes
+
+* **deps:** bump linkify-it from 5.0.0 to 5.0.2 ([31145b7](https://github.com/forcedotcom/ts-types/commit/31145b775588164b2653212ec47384d5b07c057a))
+
+
+
 # [3.2.0](https://github.com/forcedotcom/ts-types/compare/3.1.0...3.2.0) (2026-08-26)
 
 
