@@ -1,3 +1,12 @@
+## [3.2.3](https://github.com/forcedotcom/ts-types/compare/3.2.2...3.2.3) (2026-10-22)
+
+
+### Bug Fixes
+
+* **deps:** bump markdown-it from 14.3.2 to 14.3.3 ([f2ead46](https://github.com/forcedotcom/ts-types/commit/f2ead464e92c2a106e34cd037454c32fec3a94c3))
+
+
+
 ## [3.2.2](https://github.com/forcedotcom/ts-types/compare/3.2.1...3.2.2) (2026-10-09)
 
 
