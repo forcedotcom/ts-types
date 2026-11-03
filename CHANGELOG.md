@@ -1,3 +1,12 @@
+## [3.2.4](https://github.com/forcedotcom/ts-types/compare/3.2.3...3.2.4) (2026-11-03)
+
+
+### Bug Fixes
+
+* Update CODEOWNERS ([49b6d31](https://github.com/forcedotcom/ts-types/commit/49b6d31716657173e4658b1ae7536c9f0a7502c6))
+
+
+
 ## [3.2.3](https://github.com/forcedotcom/ts-types/compare/3.2.2...3.2.3) (2026-10-22)
 
 
